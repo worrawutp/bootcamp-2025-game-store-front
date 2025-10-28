@@ -1,0 +1,39 @@
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Inter";
+  height: 100%;
+}
+
+main {
+  background-color: rgb(236, 237, 234);
+  height: 100%;
+}
+
+section {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 810px;
+}
+
+.card {
+  .photo {
+    width: 180px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .category {
+    font-size: 0.85rem;
+  }
+  .title {
+    font-weight: 600;
+    padding: 0.33rem 0;
+  }
+}
