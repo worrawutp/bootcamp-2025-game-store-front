@@ -13,22 +13,28 @@ main {
 }
 
 section {
+  display: flex;
+  flex-direction: row;
   padding: 1rem;
   margin: 0 auto;
   max-width: 810px;
 }
 
 .card {
+
   width: fit-content;
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
-  
+  margin-left: 20px;
+
   .photo {
     width: 180px;
     height: 200px;
     overflow: hidden;
+
     margin-bottom: 0.5rem;
+
     img {
       width: 100%;
       object-fit: cover;
@@ -42,8 +48,25 @@ section {
   .category {
     font-size: 0.85rem;
   }
+
   .title {
     font-weight: 600;
     padding: 0.33rem 0;
+  }
+  .price_before{
+    text-decoration: line-through;
+  }
+  .percen{
+    padding: 0px 4px;
+    width: fit-content;
+    font-weight: 600;
+    margin-right: 120px;
+    background-color: rgb(38, 187, 255);
+    color: #000000;
+    border-radius: 10px; 
+    align-items: center;
+  }
+  .discount{
+    display: flex;
   }
 }
