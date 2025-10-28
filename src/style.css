@@ -19,14 +19,24 @@ section {
 }
 
 .card {
+  width: fit-content;
+  background: #fafafa;
+  border-radius: 4px;
+  overflow: hidden;
+  
   .photo {
     width: 180px;
+    height: 200px;
     overflow: hidden;
     margin-bottom: 0.5rem;
     img {
       width: 100%;
       object-fit: cover;
     }
+  }
+
+  .card-info {
+    padding: 0.5rem;
   }
 
   .category {
