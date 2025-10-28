@@ -46,4 +46,15 @@ section {
     font-weight: 600;
     padding: 0.33rem 0;
   }
+  .bluebox {
+    border-radius: 9999px;
+    display: inline-flex;
+    font-weight: 500;
+    padding: 0 8px;
+    background-color: rgb(38, 187, 255);
+    color: #000;
+  }
+  .price{
+    padding: 0.33rem 0;
+  }
 }
