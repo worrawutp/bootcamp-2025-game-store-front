@@ -15,7 +15,11 @@ main {
 section {
   padding: 1rem;
   margin: 0 auto;
-  max-width: 810px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .card {
