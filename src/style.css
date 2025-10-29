@@ -8,13 +8,14 @@ body {
 }
 
 main {
+  display: flex;
   background-color: rgb(236, 237, 234);
   height: 100%;
 }
 
 section {
   padding: 1rem;
-  margin: 0 auto;
+  margin: 0 1rem;
   max-width: 810px;
 }
 
@@ -23,12 +24,13 @@ section {
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
-  
+
   .photo {
     width: 180px;
     height: 200px;
     overflow: hidden;
     margin-bottom: 0.5rem;
+
     img {
       width: 100%;
       object-fit: cover;
@@ -40,8 +42,10 @@ section {
   }
 
   .category {
+
     font-size: 0.85rem;
   }
+
   .title {
     font-weight: 600;
     padding: 0.33rem 0;
