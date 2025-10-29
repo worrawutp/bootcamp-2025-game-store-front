@@ -58,10 +58,27 @@ section {
     color: #000;
   }
   .price{
+    font-weight: 200px;
     padding: 0.33rem 0;
   }
   .price-real{
     text-decoration: line-through;
     color: #636060;
+  }
+  .marked {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px; 
+    width: 20px;
+background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik02LjM2MDIgMi4wODE4QzYuNDE4NSAxLjk3MjczIDYuNTgxMzkgMS45NzI3MyA2LjYzOTcgMi4wODE4TDguNzAzMjEgNS45NDIwNUM4Ljc0NzQgNi4wMjQ3IDguODU4NTcgNi4wNDk1OSA4LjkzNjQ5IDUuOTk0MjhMMTEuNzQ5MiAzLjk5NzQzQzExLjg2NjIgMy45MTQzNiAxMi4wMjgxIDQuMDE1MzkgMTEuOTk1OCA0LjE1MTM0TDEwLjc3NzYgOS4yODAxNUMxMC43NjE0IDkuMzQ4NTMgMTAuNjk3OCA5LjM5NzA2IDEwLjYyNDYgOS4zOTcwNkgyLjM3NTRDMi4zMDIxMSA5LjM5NzA2IDIuMjM4NTggOS4zNDg1MyAyLjIyMjMzIDkuMjgwMTRMMS4wMDQxOCA0LjE1MTM0QzAuOTcxODg3IDQuMDE1MzkgMS4xMzM3NiAzLjkxNDM2IDEuMjUwNzcgMy45OTc0M0w0LjA2MzQ4IDUuOTk0MjdDNC4xNDE0IDYuMDQ5NTkgNC4yNTI1OCA2LjAyNDcgNC4yOTY3NiA1Ljk0MjA1TDYuMzYwMiAyLjA4MThaIiBmaWxsPSIjRkZEMTVDIi8+CiAgICA8cGF0aCBkPSJNMi40MDc1MyAxMC4xNTY0SDEwLjU5MzNDMTAuNjggMTAuMTU2NCAxMC43NTAzIDEwLjIyMzYgMTAuNzUwMyAxMC4zMDY2TDEwLjc1MDMgMTAuODQ5OEMxMC43NTAzIDEwLjkzMjggMTAuNjggMTEgMTAuNTkzMyAxMUgyLjQwNzU0QzIuMzIwODUgMTEgMi4yNTA1NyAxMC45MzI4IDIuMjUwNTcgMTAuODQ5OEwyLjI1MDU2IDEwLjMwNjZDMi4yNTA1NiAxMC4yMjM2IDIuMzIwODQgMTAuMTU2NCAyLjQwNzUzIDEwLjE1NjRaIiBmaWxsPSIjRkZEMTVDIi8+Cjwvc3ZnPgo=);
+  }
+  .boxmarked {
+    border-radius: 4px;
+    padding: 2px 6px; 
+    display: inline-block;
+    background-color: #b9b6b6;
+    display: inline-flex;         
+    align-items: center;  
+    gap: 3px;
   }
 }
