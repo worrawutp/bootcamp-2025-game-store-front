@@ -18,11 +18,51 @@ section {
   max-width: 810px;
 }
 
+.gamebar {
+  display: flex;
+  background-color: #1b2838;
+  flex-direction: row;
+  padding: 0.5rem;
+  margin: 0 -0.5rem -0.5rem -0.5rem; /* ให้ติดขอบการ์ด */
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+
+
+.gamebar div {
+  /* background-color:rgb(76, 76, 77);
+  padding: 10px; */
+  margin: 5px;
+}
+
+.container-price {
+  display: flex;
+  flex-direction: row;
+}
+
+.discount-badge {
+  background-color: #4c9e3f;
+  color: #beee11;
+  padding: 0.15rem 0.4rem;
+  border-radius: 1px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .card {
   width: fit-content;
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
+
+  margin: 0;
+  position: static;
+  /*top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); */
+
   
   .photo {
     width: 180px;
@@ -46,4 +86,19 @@ section {
     font-weight: 600;
     padding: 0.33rem 0;
   }
+
+  .original-price {
+    text-decoration: line-through;
+    font-size: 0.5rem;
+    color: #738895;
+
+  }
+
+  .price {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: auto;
+  }
 }
+
+
