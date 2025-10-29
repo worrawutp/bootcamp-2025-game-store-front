@@ -229,3 +229,20 @@ section {
   background-color: #007aff;
   transform: scale(1.05);
 }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #7a7777;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.crown-icon {
+  color: #eacc55;
+  font-size: 1rem;
+}
