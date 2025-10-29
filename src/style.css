@@ -8,29 +8,34 @@ body {
 }
 
 main {
-  background-color: rgb(236, 237, 234);
+  background-color: #121212;
   height: 100%;
 }
 
 section {
   padding: 1rem;
   margin: 0 auto;
-  max-width: 810px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .card {
-  width: fit-content;
+  width: 200px;
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
   
+  
   .photo {
-    width: 180px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
     overflow: hidden;
     margin-bottom: 0.5rem;
     img {
-      width: 100%;
+      width: 200%;
       object-fit: cover;
     }
   }
@@ -46,4 +51,181 @@ section {
     font-weight: 600;
     padding: 0.33rem 0;
   }
+  .price {
+    display: flex;
+    align-items:  center;
+    gap: 0.5rem;
+  }
+
+  .discount {
+    background-color: #007aff;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 2px 6px;
+  }
+
+  .price-base {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.85rem;
+  }
+
+  .price-discounted {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-family: "Inter", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.logo img {
+  width: 28px;
+  height: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  margin: 0.5rem;
+}
+
+.nav-links a:hover {
+  color: #007aff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #0090dd;
+}
+
+.banner {
+  position: relative;
+  width: 420px;
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+  transition: filter 0.3s ease;
+}
+
+.banner:hover img {
+  filter: brightness(0.9);
+}
+
+.banner-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  width: 100%;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.banner-title h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.banner-title p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.banner-btn {
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-btn:hover {
+  background-color: #007aff;
+  transform: scale(1.05);
 }
