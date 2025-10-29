@@ -23,7 +23,7 @@ section {
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
-  
+
   .photo {
     width: 180px;
     height: 200px;
@@ -45,5 +45,28 @@ section {
   .title {
     font-weight: 600;
     padding: 0.33rem 0;
+  }
+  .price {
+
+  }
+  .fullprice {
+    font-size: 15px;
+    text-decoration: line-through;
+    opacity: 50%;
+  }
+  .t {
+    font-size: 14px;
+    opacity: 50%;
+    margin-left: -5px;
+  }
+  .discountprice{
+    font-size: 15px;
+  }
+  .discount {
+    background-color: aqua;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 3px;
+    font-size: 12px;
   }
 }
