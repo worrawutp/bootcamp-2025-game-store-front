@@ -24,7 +24,7 @@ section {
 
 .card {
   width: 200px;
-  background: #fafafa;
+  background: #121212;
   border-radius: 4px;
   overflow: hidden;
   
@@ -34,9 +34,15 @@ section {
     height: 250px;
     overflow: hidden;
     margin-bottom: 0.5rem;
+    position: relative;
     img {
       width: 200%;
       object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+    &:hover img {
+      filter: brightness(0.7);
+      cursor: pointer;
     }
   }
 
@@ -46,20 +52,23 @@ section {
 
   .category {
     font-size: 0.85rem;
+    color: hsla(0, 0%, 100%, 0.65);;
   }
   .title {
     font-weight: 600;
     padding: 0.33rem 0;
+    color:#fff
   }
   .price {
     display: flex;
     align-items:  center;
     gap: 0.5rem;
+    color: #fff;
   }
 
   .discount {
     background-color: #007aff;
-    color: white;
+    color: black;
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 10px;
@@ -229,3 +238,26 @@ section {
   background-color: #007aff;
   transform: scale(1.05);
 }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);;
+  color: #fff;
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tag img {
+  width: 20px;
+  height: 20px;
+}
+
+.tag span{
+  font-size: 14px;
+  color: #fff
+}
+
