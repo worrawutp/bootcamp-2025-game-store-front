@@ -70,4 +70,10 @@ section {
   align-items: center;
   gap: 8px; 
 }
+.game-list {
+  display: flex;
+  flex-wrap: wrap; /* makes them go to next line if screen is too small */
+  gap: 20px;       /* space between cards */
+  justify-content: center; /* center them horizontally */
+}
 }
