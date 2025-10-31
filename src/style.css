@@ -59,15 +59,21 @@ section {
   display: inline-block;
   background-color: #20A3E8; 
   color: white;
-  font-weight: bold;
-  padding: 2px 10px;
+  font-weight: small;
+  padding: 2px 4px;
   border-radius: 9999px; 
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.2;
 }
 .price-low {
   display: flex;
   align-items: center;
   gap: 8px; 
+}
+.game-list {
+  display: flex;
+  flex-wrap: wrap; /* makes them go to next line if screen is too small */
+  gap: 20px;       /* space between cards */
+  justify-content: center; /* center them horizontally */
 }
 }
