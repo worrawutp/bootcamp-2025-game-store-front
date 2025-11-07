@@ -5,6 +5,7 @@ html {
 body {
   font-family: "Inter";
   height: 100%;
+  margin: 0;
 }
 
 main {
@@ -16,58 +17,83 @@ section {
   padding: 1rem;
   margin: 0 auto;
   max-width: 810px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  justify-content: center;
 }
 
 .card {
-  width: fit-content;
+  width: 180px;
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
-  
-  .photo {
-    width: 180px;
-    height: 200px;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .card-info {
-    padding: 0.5rem;
-  }
-
-  .category {
-    font-size: 0.85rem;
-  }
-  .title {
-    font-weight: 600;
-    padding: 0.33rem 0;
-  }
-  .original-price {
-    text-decoration: line-through;
-    color: gray;
-    margin-right: 0.5rem;
-  }
-  .discounted-price {
-    font-weight: 600;
-    color: #000000;
-  }
-  .discount-label {
-  display: inline-block;
-  background-color: #20A3E8; 
-  color: white;
-  font-weight: bold;
-  padding: 2px 10px;
-  border-radius: 9999px; 
-  font-size: 14px;
-  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
 }
+
+.photo {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 0.5rem;
+}
+
+.category {
+  font-size: 0.85rem;
+}
+
+.title {
+  font-weight: 600;
+  padding: 0.33rem 0;
+}
+
+.firstrun {
+  display: inline-block;
+  background-color: #505455;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.discount-label {
+  display: inline-block;
+  background-color: #20A3E8;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  font-size: 11px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
 .price-low {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 6px;
+  margin-top: 6px;
 }
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.85rem;
+}
+
+.discounted-price {
+  font-weight: 600;
+  color: #000;
 }
