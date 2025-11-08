@@ -11,6 +11,8 @@ gameData.pop()
 console.log(gameData)
 
 gameData.forEach((line) => {
+    let data = line.split(',')
+
     let gameCard = `<div>${line}</div>`
     gameList.insertAdjacentHTML('beforeend', gameCard)
 })
