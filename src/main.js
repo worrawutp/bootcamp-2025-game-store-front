@@ -1,8 +1,12 @@
 import './reset.css'
 import './style.css'
 
-import gamelist from "./db/game-list.csv?raw"
+import rawData from "./db/game-list.csv?raw"
 
-console.log(gamelist)
+let gameList = document.getElementById("game-list")
+let gameData = rawData.split("\n")
 
-console.log(gamelist.split("\n"))
+gameData.forEach((line) => {
+    let gameCard = `<div>${line}</div>`
+    gameList.insertAdjacentHTML('beforeend', gameCard)
+})
