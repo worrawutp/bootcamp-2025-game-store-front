@@ -19,6 +19,31 @@ gameData.forEach((line) => {
         discount_percent: data[3],
         first_run: data[4]
     }
-    let gameCard = `<div>${line}</div>`
+    let gameCard = `
+    <div class="card">
+        <div class="photo">
+          <img src="src/asset/Duckov.png" alt="Dockkov">
+        </div>
+        <div class="card-info">
+          <div class="category">${gameInfo.category}</div>
+          <div class="title">${gameInfo.title}</div>
+        
+          <div class="boxmarked">
+              <span class="marked"></span>
+              <span>${gameInfo.first_run}</span>
+            </div>  
+
+          <div class="price-info">
+            <div class="bluebox">
+              <span>${gameInfo.discount_percent}</span>
+            </div>
+            <div class="price">
+              <div class="price-real">${gameInfo.base_price}</div>
+              <div class="price-discount">THB 362.70 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `
     gameList.insertAdjacentHTML('beforeend', gameCard)
 })
