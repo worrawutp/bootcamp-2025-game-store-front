@@ -62,18 +62,18 @@ gameData.forEach((line) => {
         <div class="category">${gameInfo.category}</div>
         <div class="title">${gameInfo.title}</div>
         ${gameInfo.discount_percent > 0 ? `<span class="discount">-${gameInfo.discount_percent}%</span>` : ""}
+        ${gameInfo.first_run === "Yes" ? `
+          <div class="tag">
+            <img src="src/asset/crown.png" alt="crown">
+            <span>First Run</span>
+          </div>` : ""}
         <div class="price">
           ${gameInfo.discount_percent > 0
             ? `<span class="price-base">THB ${gameInfo.base_price.toFixed(2)}</span>
                <span class="price-discounted">THB ${discountedPrice.toFixed(2)}</span>`
             : `<span>THB ${gameInfo.base_price.toFixed(2)}</span>`
           }
-        </div>
-        ${gameInfo.first_run === "Yes" ? `
-          <div class="tag">
-            <img src="src/asset/crown.png" alt="crown">
-            <span>First Run</span>
-          </div>` : ""}
+        </div> 
       </div>
     </div>
   `;
