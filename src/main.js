@@ -1,22 +1,15 @@
 import './reset.css'
 import './style.css'
 
-import rawData from "./db/game-list.csv?raw"
+import getGames from "./gameDataService.js"
 
 let gameListDom = document.getElementById("game-list")
-let list = rawData.split("\n")
+let rawData = await getGames()
 
-list.shift()
-list.forEach(line => {
-  let values = line.split(",")
-  let gameInfo = {
-    title: values[0],
-    category: values[1],
-    base_price: values[2],
-    discount_percent: values[3],
-    first_run: values[4],
-  }
-
+rawData.forEach(gameInfo => {
+  // TODO:
+  // need resolve photoName
+  
   let gameCardDom = `
       <div class="card">
         <div class="photo">
@@ -28,7 +21,7 @@ list.forEach(line => {
           <div class="price">THB ${gameInfo.base_price}</div>
         </div>
       </div> <!-- card-->
-`
+  `
   gameListDom.insertAdjacentHTML('beforeend', gameCardDom)
 })
 
