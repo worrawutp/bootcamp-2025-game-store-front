@@ -271,3 +271,11 @@ section {
   align-items: flex-start;
   gap: 4px ;
 }
+
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
