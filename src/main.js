@@ -15,19 +15,20 @@ gameData.forEach((line) => {
     let gameInfo = {
         title: data[0],
         category: data[1],
-        base_price: data[2],
-        discount_percent: data[3],
+        base_price: parseFloat(data[2]),
+        discount_percent: parseInt(data[3]),
         first_run: data[4]
     }
+    
     let gameCard = `
     <div class="card">
         <div class="photo">
           <img src="src/asset/Duckov.png" alt="Dockkov">
         </div>
         <div class="card-info">
-          <div class="category">${gameInfo.category}</div>
+          <div class="category">${gameInfo.category}</div>   
           <div class="title">${gameInfo.title}</div>
-        
+       
           <div class="boxmarked">
               <span class="marked"></span>
               <span>${gameInfo.first_run}</span>
