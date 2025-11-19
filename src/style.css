@@ -9,7 +9,6 @@ body {
 
 main {
   background-color: rgb(236, 237, 234);
-  height: 100%;
 }
 
 section {
@@ -23,12 +22,14 @@ section {
   background: #fafafa;
   border-radius: 4px;
   overflow: hidden;
-  
+  margin: 10px 0;
+
   .photo {
     width: 180px;
     height: 200px;
     overflow: hidden;
     margin-bottom: 0.5rem;
+
     img {
       width: 100%;
       object-fit: cover;
@@ -42,8 +43,42 @@ section {
   .category {
     font-size: 0.85rem;
   }
+
   .title {
     font-weight: 600;
     padding: 0.33rem 0;
+  }
+
+}
+
+#gamelist {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 150px;
+
+  .price-discount {
+    text-decoration: line-through;
+  }
+
+  .tag {
+    background-color: rgb(73, 73, 73);
+    color: #fff;
+    width: 60%;
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+
+  .discount-class {
+    background-color: rgb(38, 187, 255);
+    border-radius: 4px;
+    width: 45px;
+  }
+
+  .price {
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 0.734rem;
+    justify-self: start;
   }
 }
