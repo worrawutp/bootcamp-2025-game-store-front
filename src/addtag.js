@@ -1,3 +1,3 @@
-const tag = document.getElementById("tags");
-const FirstRUN = "First Run";
-tag.textContent = FirstRUN;
+const tag = document.getElementById("tag");
+const firstRUN = "First Run";
+tag.textContent = firstRUN;
