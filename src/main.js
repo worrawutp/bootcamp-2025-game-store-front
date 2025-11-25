@@ -1,3 +1,4 @@
+
 import "./reset.css";
 import "./style.css";
 import list from "./data/game-list.csv?raw";
