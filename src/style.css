@@ -28,6 +28,7 @@ section {
 }
 
 .card {
+  position: relative;
   width: fit-content;
   background: #fafafa;
   border-radius: 6px;
@@ -56,5 +57,15 @@ section {
     font-weight: 600;
     padding: 0.33rem 0;
     line-height: 1.4;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
   }
 }
