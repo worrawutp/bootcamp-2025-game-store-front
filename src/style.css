@@ -271,3 +271,47 @@ section {
   align-items: flex-start;
   gap: 4px ;
 }
+
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+#game-list .tag{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);;
+  color: #fff;
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+#game-list .tag img {
+  width: 20px;
+  height: 20px;
+}
+
+#game-list .tag span{
+  font-size: 14px;
+  color: #fff
+}
+
+#game-list .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px ;
+}
+
+#game-list .discount {
+  display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px ; 
+}
+}
