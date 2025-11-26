@@ -69,3 +69,25 @@ section {
     cursor: pointer;
   }
 }
+
+[popover] {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  border: none;
+  overflow: auto;
+}
+
+:popover-open {
+  width: 550px;
+  padding: 1rem;
+  margin: 15% auto auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 0px #404040;
+}
+
+::backdrop {
+  background: #14141466;
+  backdrop-filter: blur(3px);
+}
