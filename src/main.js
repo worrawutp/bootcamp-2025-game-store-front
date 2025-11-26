@@ -12,7 +12,7 @@ if (rawData) {
       let gameCardDom = `
         <div class="card" id="card-${gameInfo.id}">
             <div class="photo">
-              <img src="src/asset/${gameInfo.photoName}.jpeg" alt="Quartet">
+              <img src="src/asset/${gameInfo.photoName}.jpeg" alt="${gameInfo.title}">
             </div>
             <div class="card-info">
               <div class="category">${gameInfo.category}</div>
