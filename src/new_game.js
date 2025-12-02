@@ -34,9 +34,6 @@ btnSubmit.addEventListener("click", function(event){
     .then((gameInfo) => {
       console.log(gameInfo)
 
-      // TODO
-      // Read values from data 
-      // and then add a new game card to the dashboard with this data
       let gameListDom = document.getElementById("game-list")
       let gameCardDom = `
           <div class="card" id="card-${gameInfo.id}">
@@ -70,6 +67,11 @@ btnSubmit.addEventListener("click", function(event){
       if(newGameForm != undefined) {
         newGameForm.hidePopover()
       }
+
+      // Clear form input values
+      title.value = ""
+      base_price.value = ""
+      discount_percent.value = ""
     })
 })
 
