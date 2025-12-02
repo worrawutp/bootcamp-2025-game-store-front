@@ -3,10 +3,10 @@ const btnSubmit = document.getElementById("btn-submit")
 btnSubmit.addEventListener("click", function(event){
   event.preventDefault()
 
-  const title = document.getElementById("new-game-title")
-  const category = document.getElementById("new-game-category")
-  const base_price = document.getElementById("new-game-base-price")
-  const discount_percent = document.getElementById("new-game-discount-percent")
+  const title = document.getElementById("game-title")
+  const category = document.getElementById("game-category")
+  const base_price = document.getElementById("game-base-price")
+  const discount_percent = document.getElementById("game-discount-percent")
 
   const gameData = {
     title: title.value,
@@ -63,7 +63,7 @@ btnSubmit.addEventListener("click", function(event){
       let newCardDeleteBtn = newCard.querySelector("button")
       newCardDeleteBtn.addEventListener("click", submitDeleteGameCard)
 
-      const newGameForm = document.getElementById("new-game-form")
+      const newGameForm = document.getElementById("game-form")
       if(newGameForm != undefined) {
         newGameForm.hidePopover()
       }

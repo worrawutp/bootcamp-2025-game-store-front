@@ -18,21 +18,21 @@
   <main>
     <section>
       <div>
-        <button id="btn-create-new-game" popovertarget="new-game-form">Create New Game</button>
+        <button id="btn-create-new-game" popovertarget="game-form">Create New Game</button>
       </div>
 
       <div id="game-list"></div>
 
-      <div id="new-game-form" popover>
+      <div id="game-form" popover>
         <form>
           <h2>Create New Game</h2>
           <div class="field">
-            <label for="new-game-title">Title</label>
-            <input type="text" name="title" id="new-game-title">
+            <label for="game-title">Title</label>
+            <input type="text" name="title" id="game-title">
           </div> 
           <div class="field">
-            <label for="new-game-category">Category</label>
-            <select name="category" id="new-game-category">
+            <label for="game-category">Category</label>
+            <select name="category" id="game-category">
               <option value="base">Base</option>
               <option value="edition">Edition</option>
               <option value="add-on">Add-on</option>
@@ -40,13 +40,13 @@
           </div> 
 
           <div class="field">
-            <label for="new-game-base_price">Base Price</label>
-            <input type="number" name="base_price" id="new-game-base-price">
+            <label for="game-base-price">Base Price</label>
+            <input type="number" name="base_price" id="game-base-price">
           </div> 
 
           <div class="field">
-            <label for="new-game-discount_percent">% Discount</label>
-            <input type="number" name="discount_percent" id="new-game-discount-percent">
+            <label for="game-discount-percent">% Discount</label>
+            <input type="number" name="discount_percent" id="game-discount-percent">
           </div> 
 
           <fieldset>
