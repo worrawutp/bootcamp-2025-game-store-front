@@ -63,10 +63,17 @@ section {
     background: none;
     border: none;
     padding: 0;
+    cursor: pointer;
+  }
+  button.btn-delete {
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
-    cursor: pointer;
+  }
+  button.btn-edit {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 
