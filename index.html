@@ -18,58 +18,99 @@
   <main>
     <section>
       <div>
-        <button id="btn-create-new-game" popovertarget="game-form">Create New Game</button>
+        <button id="btn-create-new-game" popovertarget="new-game-form">Create New Game</button>
       </div>
 
       <div id="game-list"></div>
 
-      <div id="game-form" popover>
-        <form>
-          <h2 class="header-title">Create New Game</h2>
-          <div class="field">
-            <label for="game-title">Title</label>
-            <input type="text" name="title" id="game-title">
-          </div> 
-          <div class="field">
-            <label for="game-category">Category</label>
-            <select name="category" id="game-category">
-              <option value="base">Base</option>
-              <option value="edition">Edition</option>
-              <option value="add-on">Add-on</option>
-            </select>
-          </div> 
+      <form id="new-game-form" popover>
+        <h2 class="header-title">Create New Game</h2>
+        <div class="field">
+          <label for="new-game-title">Title</label>
+          <input type="text" name="title" id="new-game-title">
+        </div> 
+        <div class="field">
+          <label for="new-game-category">Category</label>
+          <select name="category" id="new-game-category">
+            <option value="base">Base</option>
+            <option value="edition">Edition</option>
+            <option value="add-on">Add-on</option>
+          </select>
+        </div> 
 
-          <div class="field">
-            <label for="game-base-price">Base Price</label>
-            <input type="number" name="base_price" id="game-base-price">
-          </div> 
+        <div class="field">
+          <label for="new-game-base-price">Base Price</label>
+          <input type="number" name="base_price" id="new-game-base-price">
+        </div> 
 
-          <div class="field">
-            <label for="game-discount-percent">% Discount</label>
-            <input type="number" name="discount_percent" id="game-discount-percent">
-          </div> 
+        <div class="field">
+          <label for="new-game-discount-percent">% Discount</label>
+          <input type="number" name="discount_percent" id="new-game-discount-percent">
+        </div> 
 
-          <fieldset>
-            <legend>First Run</legend>
-            <div>
-              <input type="radio" id="first-run-yes" name="first_run" value="yes" checked />
-              <label for="first-run-yes">Yes</label>
-            </div>
-            <div>
-              <input type="radio" id="first-run-no" name="first_run" value="no" />
-              <label for="first-run-no">No</label>
-            </div>
-          </fieldset>
-
-          <div class="field">
-            <input id="btn-submit" type="submit" value="Create">
+        <fieldset>
+          <legend>First Run</legend>
+          <div>
+            <input type="radio" id="new-first-run-yes" name="first_run" value="yes" checked />
+            <label for="new-first-run-yes">Yes</label>
           </div>
-        </form>
-      </div> <!-- new-game-form-->
+          <div>
+            <input type="radio" id="new-first-run-no" name="first_run" value="no" />
+            <label for="new-first-run-no">No</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <input id="btn-submit-new-game" type="submit" value="Create">
+        </div>
+      </form> <!-- new-game -->
+
+      <form id="edit-game-form" popover>
+        <h2 class="header-title">Edit Game</h2>
+        <div class="field">
+          <label for="edit-game-title">Title</label>
+          <input type="text" name="title" id="edit-game-title">
+        </div> 
+        <div class="field">
+          <label for="edit-game-category">Category</label>
+          <select name="category" id="edit-game-category">
+            <option value="base">Base</option>
+            <option value="edition">Edition</option>
+            <option value="add-on">Add-on</option>
+          </select>
+        </div> 
+
+        <div class="field">
+          <label for="edit-game-base-price">Base Price</label>
+          <input type="number" name="base_price" id="edit-game-base-price">
+        </div> 
+
+        <div class="field">
+          <label for="edit-game-discount-percent">% Discount</label>
+          <input type="number" name="discount_percent" id="edit-game-discount-percent">
+        </div> 
+
+        <fieldset>
+          <legend>First Run</legend>
+          <div>
+            <input type="radio" id="edit-first-run-yes" name="first_run" value="yes" checked />
+            <label for="edit-first-run-yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="edit-first-run-no" name="first_run" value="no" />
+            <label for="edit-first-run-no">No</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <input id="btn-submit-edit-game" type="submit" value="Update">
+        </div>
+      </form> <!-- edit-game -->
 
       <div id="error"></div>
     </section>
   </main>
+
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="/src/new_game.js"></script>
 </body>
