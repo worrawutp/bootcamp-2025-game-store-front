@@ -1,12 +1,15 @@
+import { submitDeleteGameCard } from "./delete_game"
+
 // submit new game
-const btnSubmit = document.getElementById("btn-submit")
+const btnSubmit = document.getElementById("btn-submit-new-game")
+console.log(btnSubmit)
 btnSubmit.addEventListener("click", function(event){
   event.preventDefault()
 
-  const title = document.getElementById("game-title")
-  const category = document.getElementById("game-category")
-  const base_price = document.getElementById("game-base-price")
-  const discount_percent = document.getElementById("game-discount-percent")
+  const title = document.getElementById("new-game-title")
+  const category = document.getElementById("new-game-category")
+  const base_price = document.getElementById("new-game-base-price")
+  const discount_percent = document.getElementById("new-game-discount-percent")
 
   const gameData = {
     title: title.value,
@@ -63,7 +66,7 @@ btnSubmit.addEventListener("click", function(event){
       let newCardDeleteBtn = newCard.querySelector("button")
       newCardDeleteBtn.addEventListener("click", submitDeleteGameCard)
 
-      const newGameForm = document.getElementById("game-form")
+      const newGameForm = document.getElementById("new-game-form")
       if(newGameForm != undefined) {
         newGameForm.hidePopover()
       }
@@ -75,28 +78,3 @@ btnSubmit.addEventListener("click", function(event){
     })
 })
 
-function submitDeleteGameCard(event) {
-  const userConfirmed = confirm("Are you sure?")
-
-  if(userConfirmed) {
-    let trashBtn = event.currentTarget
-    let gameId = trashBtn.dataset.gameId
-    let url = `http://localhost:3000/games/${gameId}`
-
-    fetch(url, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-    }).then(resp => {
-      if(resp.ok) {
-        return resp.json()
-      }
-    }).then(data => {
-      const gameId = data.id
-      const deletedCard = document.getElementById(`card-${gameId}`)
-      deletedCard.remove()
-    })
-  }
-}
