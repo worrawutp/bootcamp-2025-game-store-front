@@ -38,8 +38,8 @@ if (rawData) {
     gameListDom.insertAdjacentHTML('beforeend', gameCardDom)
 
     // Add event listener for delete card button
-    let cardDeleteBtn = document.getElementById("btn-delete")
-    cardDeleteBtn.addEventListener("click", submitDeleteGameCard)
+    let cardDeleteBtnList = document.querySelectorAll("#btn-delete")
+    cardDeleteBtnList.forEach(btn => btn.addEventListener("click", submitDeleteGameCard))
 
     let cardEditBtn = document.getElementById(`btn-edit-${gameInfo.id}`)
     cardEditBtn.addEventListener("click", editGameCard)
