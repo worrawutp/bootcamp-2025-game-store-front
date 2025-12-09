@@ -98,3 +98,44 @@ section {
   background: #14141466;
   backdrop-filter: blur(3px);
 }
+
+.card.removing {
+  animation: fade-out-remove 0.5s forwards;
+}
+
+.card.adding {
+  animation: fade-in-add 0.5s ease-out forwards;
+}
+
+@keyframes fade-out-remove {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  99% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+    display: none;
+  }
+}
+
+@keyframes fade-in-add {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+  }
+}

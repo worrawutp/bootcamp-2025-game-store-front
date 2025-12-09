@@ -19,7 +19,11 @@ export function submitDeleteGameCard(event) {
     }).then(data => {
       const gameId = data.id
       const deletedCard = document.getElementById(`card-${gameId}`)
-      deletedCard.remove()
+      deletedCard.addEventListener('animationend', function(){
+        deletedCard.remove()
+      })
+
+      deletedCard.classList.add('removing')
     })
   }
 }
