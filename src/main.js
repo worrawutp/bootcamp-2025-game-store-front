@@ -1,4 +1,5 @@
 import './reset.css'
+import './tailwindcss.css'
 import './style.css'
 
 import getGames from "./gameDataService.js"
