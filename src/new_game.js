@@ -2,7 +2,6 @@ import { submitDeleteGameCard } from "./delete_game"
 
 // submit new game
 const btnSubmit = document.getElementById("btn-submit-new-game")
-console.log(btnSubmit)
 btnSubmit.addEventListener("click", function(event){
   event.preventDefault()
 
@@ -35,8 +34,6 @@ btnSubmit.addEventListener("click", function(event){
       }
     })
     .then((gameInfo) => {
-      console.log(gameInfo)
-
       let gameListDom = document.getElementById("game-list")
       let gameCardDom = `
           <div class="card" id="card-${gameInfo.id}">

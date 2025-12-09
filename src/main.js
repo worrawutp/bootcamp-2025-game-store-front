@@ -7,7 +7,6 @@ import { editGameCard } from './edit_game.js'
 
 let gameListDom = document.getElementById("game-list")
 let rawData = await getGames()
-console.log(rawData)
 
 if (rawData) {
   rawData.forEach(gameInfo => {

@@ -50,7 +50,6 @@ export function submitUpdateGameInfo(gameInfo) {
     category: inputCategory,
     first_run: inputFirstRun
   }
-  console.log(gameData)
 
   const url = `http://localhost:3000/games/${gameInfo.id}`
   fetch(url, {
@@ -62,7 +61,22 @@ export function submitUpdateGameInfo(gameInfo) {
   })
   .then(resp => resp.json())
   .then(data => {
-    // 4. Close modal
-    // 5. Update new value that we just edit on the game card
+    let gameCard = document.getElementById(`card-${gameInfo.id}`)
+    updateGameCard(gameCard, data)
+
+    gameForm.hidePopover()
   })
+}
+
+function updateGameCard(gameCard, data) {
+  let title = gameCard.querySelector(".card-info .title")
+  title.textContent = data.title
+
+  let category = gameCard.querySelector(".card-info .category")
+  category.textContent = data.category
+
+  let basePrice = gameCard.querySelector(".card-info .price")
+  basePrice.textContent = `THB ${data.base_price}`
+
+  gameCard.dataset.gameInfo = JSON.stringify(data)
 }
