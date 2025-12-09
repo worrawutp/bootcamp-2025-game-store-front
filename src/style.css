@@ -104,7 +104,7 @@ section {
 }
 
 .card.adding {
-  animation: fade-in-add 0.5s ease-out forwards;
+  animation: fade-in-add 0.3s ease-out forwards;
 }
 
 @keyframes fade-out-remove {
@@ -126,7 +126,7 @@ section {
 @keyframes fade-in-add {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
     max-height: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -134,8 +134,5 @@ section {
   100% {
     opacity: 1;
     transform: translateY(0);
-    max-height: 500px;
-    padding-top: 1rem; 
-    padding-bottom: 1rem;
   }
 }
