@@ -63,9 +63,38 @@ section {
     background: none;
     border: none;
     padding: 0;
+    cursor: pointer;
+  }
+  button.btn-delete {
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
-    cursor: pointer;
   }
+  button.btn-edit {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+[popover] {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  border: none;
+  overflow: auto;
+}
+
+:popover-open {
+  width: 550px;
+  padding: 1rem;
+  margin: 8% auto auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 0px #404040;
+}
+
+::backdrop {
+  background: #14141466;
+  backdrop-filter: blur(3px);
 }
